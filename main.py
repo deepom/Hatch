@@ -1,15 +1,22 @@
 # Coded by METACHAR
 # Looking to work with other hit me up on my email @metachar1@gmail.com <--
-import sys
-import datetime
-import selenium
-import requests
-import time as t
-from sys import stdout
+import modules/libaries
 from selenium import webdriver
-from optparse import OptionParser
-from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.keys import keys
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.by import By
+import selenium.webdriver.support.ui as ui
+import selenium.webdriver.support.expected_conditions as EC
+import os
+import time
+options = webdriver.ChromeOptions()
+options.add_argument('--ignore-certificate-errors')
+options.add_argument('--ignore-ssl-errors')
+dir_path = os.path.dirname(os.path.realpath(_file_))
+chromedriver = dir_path + "/chromedriver"
+os.environ[webdriver.chrome.driver"] = chromedriver
+driver = webdriver.chrome(chrome_options=options, executable_path=chromedriver)
+
 
 
 #Graphics
